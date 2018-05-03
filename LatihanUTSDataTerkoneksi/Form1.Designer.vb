@@ -33,13 +33,13 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -147,6 +147,24 @@ Partial Class Form1
         Me.DataGridView1.Size = New System.Drawing.Size(473, 179)
         Me.DataGridView1.TabIndex = 11
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(127, 102)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox2.Size = New System.Drawing.Size(341, 20)
+        Me.TextBox2.TabIndex = 12
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Admin", "Pegawai", "Manajer"})
+        Me.ComboBox1.Location = New System.Drawing.Point(127, 147)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(215, 21)
+        Me.ComboBox1.TabIndex = 13
+        '
         'Column1
         '
         Me.Column1.DataPropertyName = "id"
@@ -156,13 +174,13 @@ Partial Class Form1
         '
         'Column2
         '
-        Me.Column2.DataPropertyName = "username"
+        Me.Column2.DataPropertyName = "uname"
         Me.Column2.HeaderText = "Username"
         Me.Column2.Name = "Column2"
         '
         'Column3
         '
-        Me.Column3.DataPropertyName = "password"
+        Me.Column3.DataPropertyName = "pass"
         Me.Column3.HeaderText = "Password"
         Me.Column3.Name = "Column3"
         '
@@ -178,23 +196,6 @@ Partial Class Form1
         Me.Column5.DataPropertyName = "flag"
         Me.Column5.HeaderText = "Flag"
         Me.Column5.Name = "Column5"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(127, 102)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox2.Size = New System.Drawing.Size(341, 20)
-        Me.TextBox2.TabIndex = 12
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Admin", "Pegawai", "Manajer"})
-        Me.ComboBox1.Location = New System.Drawing.Point(127, 147)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(341, 21)
-        Me.ComboBox1.TabIndex = 13
         '
         'Form1
         '

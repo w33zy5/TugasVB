@@ -25,7 +25,7 @@ Public Class Koneksi
     End Function
 
     Public Function xFungsiQuery(Qry As String) As DataTable
-        Dim xTabel As New DataTable
+        Dim xTabel As DataTable
         Try
             If CekKoneksi() = True Then
                 MySqlAdapter = New MySqlDataAdapter(Qry, MySQLconn)

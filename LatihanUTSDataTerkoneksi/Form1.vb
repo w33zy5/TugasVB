@@ -1,23 +1,29 @@
 ﻿Public Class Form1
     Dim xConn As New Koneksi
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        TextBox1.Text = ""
-        TextBox2.Text = ""
-        ComboBox1.Text = ""
-        CheckBox1.Checked = False
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim xTabel As DataTable = xConn.xFungsiQuery("SELECT * FROM tb_user")
+        DataGridView1.DataSource = xTabel
+        DataGridView1.Refresh()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If CheckBox1.Checked = True Then
-            xConn.xFungsiQuery("INSERT INTO tb_user (username,password,level,flag) VALUES('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & ComboBox1.Text & "', '" & 1 & "')")
-        Else
-            xConn.xFungsiQuery("INSERT INTO tb_user (username,password,level,flag) VALUES('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & ComboBox1.Text & "', '" & 0 & "')")
+            xConn.xFungsiQuery("INSERT INTO tb_user(uname,pass,level,flag) VALUES('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & ComboBox1.Text & "', '" & 1 & "')")
+        ElseIf CheckBox1.Checked = False Then
+            xConn.xFungsiQuery("INSERT INTO tb_user(uname,pass,level,flag) VALUES('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & ComboBox1.Text & "', '" & 0 & "')")
         End If
 
         Dim xTabel As DataTable = xConn.xFungsiQuery("SELECT * FROM tb_user")
         DataGridView1.DataSource = xTabel
         DataGridView1.Refresh()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TextBox1.Text = ""
+        TextBox2.Text = ""
+        ComboBox1.Text = ""
+        CheckBox1.Checked = False
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -39,11 +45,5 @@
                 TextBox1.Focus()
             End With
         End If
-    End Sub
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim xTabel As DataTable = xConn.xFungsiQuery("SELECT * FROM tb_user")
-        DataGridView1.DataSource = xTabel
-        DataGridView1.Refresh()
     End Sub
 End Class
