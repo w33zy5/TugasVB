@@ -27,18 +27,28 @@
             xRow(2) = c
             xRow(3) = d
             xTable.Rows.Add(xRow)
+            status = True
+            MessageBox.Show("Data berhasil tersimpan")
         Catch ex As Exception
-
+            status = False
+            MessageBox.Show("Data tidak tersimpan")
         End Try
 
         Return status
     End Function
 
     Private Sub FormDataTable_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Bersih()
+        BuatKolom()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Bersih()
+    End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        simpanDataTable(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text)
+        DataGridView1.DataSource = xTable
+        DataGridView1.Refresh()
     End Sub
 End Class

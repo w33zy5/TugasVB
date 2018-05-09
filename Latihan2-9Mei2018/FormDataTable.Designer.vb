@@ -31,12 +31,13 @@ Partial Class FormDataTable
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -113,30 +114,6 @@ Partial Class FormDataTable
         Me.DataGridView1.Size = New System.Drawing.Size(452, 186)
         Me.DataGridView1.TabIndex = 8
         '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "nama"
-        Me.Column1.HeaderText = "Nama"
-        Me.Column1.Name = "Column1"
-        '
-        'Column4
-        '
-        Me.Column4.DataPropertyName = "alamat"
-        Me.Column4.HeaderText = "Alamat"
-        Me.Column4.Name = "Column4"
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "notelp"
-        Me.Column2.HeaderText = "No. Telp"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "email"
-        Me.Column3.HeaderText = "Email"
-        Me.Column3.Name = "Column3"
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(260, 204)
@@ -155,11 +132,46 @@ Partial Class FormDataTable
         Me.Button2.Text = "Simpan"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "nama"
+        Me.Column1.HeaderText = "Nama"
+        Me.Column1.Name = "Column1"
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "alamat"
+        Me.Column4.HeaderText = "Alamat"
+        Me.Column4.Name = "Column4"
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "telp"
+        Me.Column2.HeaderText = "No. Telp"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "email"
+        Me.Column3.HeaderText = "Email"
+        Me.Column3.Name = "Column3"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(218, 13)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(79, 18)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "Data Form"
+        '
         'FormDataTable
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(476, 439)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
@@ -188,10 +200,11 @@ Partial Class FormDataTable
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Label5 As Label
 End Class
