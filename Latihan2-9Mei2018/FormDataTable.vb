@@ -21,7 +21,12 @@
         Dim status As Boolean = False
 
         Try
-
+            Dim xRow As DataRow = xTable.NewRow
+            xRow(0) = a
+            xRow(1) = b
+            xRow(2) = c
+            xRow(3) = d
+            xTable.Rows.Add(xRow)
         Catch ex As Exception
 
         End Try
