@@ -94,6 +94,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="transaksi.Designer.vb">
+      <DependentUpon>transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="transaksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
